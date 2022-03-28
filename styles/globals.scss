@@ -1,3 +1,7 @@
 @import "./abstract/variables";
-@import "./components/header.scss";
+@import "./abstract/typography";
+@import "./home";
 @import "./base";
+.img-gallery {
+	border-radius: 5px;
+}

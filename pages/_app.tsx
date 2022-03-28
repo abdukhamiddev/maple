@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import "../styles/globals.scss";
-import React, { useEffect } from "react";
+
 import { AnimatePresence } from "framer-motion";
 
 function handleExitComplete() {
@@ -10,20 +10,9 @@ function handleExitComplete() {
 }
 function MyApp({ Component, pageProps }: any) {
 	const router = useRouter();
-	const scrollRef = React.useRef<HTMLDivElement>(null);
-
-	useEffect(() => {
-		import("locomotive-scroll").then((locomotiveModule) => {
-			//@ts-ignore
-			const scroll = new locomotiveModule.default({
-				el: scrollRef.current,
-				smooth: true,
-			});
-		});
-	}, []);
 
 	return (
-		<div ref={scrollRef}>
+		<div className="app" data-scroll-container>
 			<AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
 				<Component {...pageProps} key={router.route} />
 			</AnimatePresence>
