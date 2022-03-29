@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Image from "next/image";
+
 import { useRef } from "react";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { motion } from "framer-motion";
-import FeatureItem from "../components/FeatureItem";
+
 import Features from "../components/Features";
 import GalleryImage from "../components/GalleryImage";
 const transition: { duration: number; ease: number[] } = {
